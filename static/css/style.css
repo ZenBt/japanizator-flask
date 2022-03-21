@@ -1,0 +1,113 @@
+@font-face{
+    font-family: electroharmonix;
+    src: '/electroharmonix.ttf';
+}
+
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	font-family: 'Noto Sans SC', sans-serif;
+	background: #000;
+}
+
+h1 {
+	color: #fff;
+	font-family: electroharmonix, sans-serif;
+	font-size: 26px;
+	text-align: center;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+input.button, a.copy, a.clear {
+	font-family: SegoeUI, sans-serif;
+	text-align: center;
+	display: flow-root;
+	text-decoration: none;
+	user-select: none;
+	color: #323130;
+	font-size: 20px;
+	height: 32px;
+	padding: 2px 20px;
+	margin-bottom: 15px;
+	margin-right: 0px;
+}
+
+input.button {
+	background: #038387;
+	color: #fff;
+	border: 2px solid #038387;
+}
+
+a.copy, a.clear {
+	background: #333333;
+	color: #fff;
+	border: 2px solid #333333;
+}
+
+a.copy:hover, a.clear:hover {
+	border-color: #666666;
+}
+
+input.button:hover {
+	border-color: #4bb4b7;
+}
+
+a.copy:active, a.clear:active {
+	border-color: #666666;
+	background: #666666;
+}
+
+input.button:active {
+	background: #4bb4b7;
+	border-color: #4bb4b7;
+}
+
+.content {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+textarea {
+	font-family: SegoeUI, sans-serif;
+	color: #fff;
+	background: #000;
+	padding: 10px;
+	padding-top: 5px;
+	margin-bottom: 15px;
+	width: 100%;
+	font-size: 16px;
+	border: 2px solid #323130;
+	box-sizing: border-box;
+	outline: none;
+	resize: none;
+}
+
+textarea:hover {
+	border-color: #605e5c;
+}
+
+textarea:focus {
+	border-color: #038387;
+}
+
+@media screen and (min-width: 992px){
+
+h1 {
+	text-align: right;
+}
+
+input.button, a.copy, a.clear {
+	display: inline;
+	margin-right: 5px;
+}
+
+
+.content {
+	padding-left: 15%;
+	padding-right: 15%;
+}
+}
