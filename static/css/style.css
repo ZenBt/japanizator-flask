@@ -118,6 +118,19 @@ textarea:focus {
 	border-color: #038387;
 }
 
+div.not-found {
+	text-align: center;
+}
+img.not-found {
+    max-width: 45%;
+	object-fit: fill;
+    height:auto;
+}
+
+div.about{
+	margin-bottom: 5%;
+}
+
 @media screen and (min-width: 992px) {
 
 h1 {
