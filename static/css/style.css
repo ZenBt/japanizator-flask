@@ -131,6 +131,14 @@ div.about{
 	margin-bottom: 5%;
 }
 
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+tr.header {
+	border-bottom: 2px solid #fff;
+}
+
 @media screen and (min-width: 992px) {
 
 h1 {
@@ -155,4 +163,3 @@ a.copy, a.clear {
 	padding-right: 15%;
 }
 }
-

@@ -1,7 +1,7 @@
 {% extends 'base.html'%}
 {% block content %}
 <form id="jap-form" action="/" method="post">
-	<textarea id="text" name="raw_text" rows="13" placeholder="Input some text and click on Japanize!"
+	<textarea id="text" name="raw_text" rows="13" maxlength="1700" placeholder="Input some text and click on Japanize!"
 		style="overflow: hidden; overflow-wrap: break-word; height: 292px;">{%if output %}{{output}}{% endif %}</textarea>
 	<script src="{{url_for('static', filename='js/autosize.js')}}"></script>
 	<script>
@@ -10,10 +10,37 @@
 	<div class="buttons">
 		<input class="button" type="submit" value="Japanize!">
 		<a class="copy" onclick="copybutton()">Copy</a>
-		<a class="clear" onclick="clearText()">Clear</a>
+		<a class="clear" onclick="clearText()">Clear Input</a>
+	</div>
 </form>
-<footer>
+
 <h1>
-<a href="{{url_for('about')}}">About Japanization</a></h1>
-</footer>
+	<a href="{{url_for('about')}}">About Japanization</a>
+</h1>
+{% if history %}
+<h2 style="text-align: center; margin-bottom: 2%">History</h2>
+<div class="buttons">
+	<a class="clear" style="width: 100%;" href="{{url_for('clear_session')}}">Clear History</a>
+</div>
+<table>
+	<tr class="header">
+		<th>
+			<h3> Raw text</h3>
+		</th>
+		<th>
+			<h3>Styled text</h3>
+		</th>
+	</tr>
+	{% for el in history %}
+	<tr>
+		<td>
+			{{el[0]}}
+		</td>
+		<td>
+			{{el[1]}}
+		</td>
+	</tr>
+	{% endfor %}
+</table>
+{% endif %}
 {% endblock content%}
