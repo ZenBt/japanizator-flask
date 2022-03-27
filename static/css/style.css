@@ -6,11 +6,12 @@
 * {
 	margin: 0px;
 	padding: 0px;
+	color: #fff
 }
 
 body {
 	font-family: 'Noto Sans SC', sans-serif;
-	background: #000;
+	background: rgb(36, 36, 36);
 }
 
 h1 {
@@ -20,6 +21,29 @@ h1 {
 	text-align: center;
 	margin-top: 15px;
 	margin-bottom: 15px;
+}
+
+h1 a{
+	text-decoration: none;
+}
+
+h1 a:hover{
+	color: #8cffec;
+}
+
+h2.not-found{
+	font-size: 50px;
+}
+
+h3.not-found {
+	font-size: 40px;
+}
+
+
+h2.not-found, h3.not-found {
+	
+	text-align: center;
+	color: #fff;
 }
 
 input.button, a.copy, a.clear {
@@ -74,7 +98,7 @@ input.button:active {
 textarea {
 	font-family: SegoeUI, sans-serif;
 	color: #fff;
-	background: #000;
+	background: rgb(54, 54, 54);
 	padding: 10px;
 	padding-top: 5px;
 	margin-bottom: 15px;
@@ -94,14 +118,21 @@ textarea:focus {
 	border-color: #038387;
 }
 
-@media screen and (min-width: 992px){
+@media screen and (min-width: 992px) {
 
 h1 {
 	text-align: right;
 }
 
-input.button, a.copy, a.clear {
+input.button  {
 	display: inline;
+	height: 39px;
+	padding-bottom: 5px;
+	margin-right: 5px;
+}
+
+a.copy, a.clear {
+	display: inline-block;
 	margin-right: 5px;
 }
 
@@ -111,3 +142,4 @@ input.button, a.copy, a.clear {
 	padding-right: 15%;
 }
 }
+
