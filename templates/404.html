@@ -1,0 +1,7 @@
+{% extends 'base.html'%}
+{% block content %}
+<div class="not-found">
+<h2 class="not-found">404</h2>
+<h3 class="not-found">Страница не найдена</h3>
+<img src="{{url_for('static', filename='img/404.jpg')}}" alt="" class="not-found"></div>
+{% endblock content%}
